@@ -1,8 +1,8 @@
-# sqlite_clone
+# MiniDB 
 
 ## Description
 
-A simple SQLite-like database built in C with B-tree storage, supporting basic SQL operations (INSERT/SELECT) and persistent disk storage.
+A lightweight SQLite-inspired database engine built in C. It uses a B-tree storage structure and supports fundamental SQL operations like **INSERT** and **SELECT**, along with persistent disk storage through a custom file format.
 
 ## Features
 
@@ -13,7 +13,7 @@ A simple SQLite-like database built in C with B-tree storage, supporting basic S
 
 ## Technologies Used
 
-- C
+- C (low-level systems programming)
 
 ## Installation
 
@@ -59,6 +59,14 @@ db > select
 Executed.
 db > .exit
 ```
+
+
+## Debug/Meta Commands
+**.btree** – Display the current B-tree structure
+
+**.constants** – Show internal constants and configuration
+
+**.exit** – Exit the database CLI
 
 ## Key Functions
 
