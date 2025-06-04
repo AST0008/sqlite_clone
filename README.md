@@ -6,13 +6,14 @@ A simple SQLite-like database built in C with B-tree storage, supporting basic S
 
 ## Features
 
-*   B-tree based storage engine
-*   Basic SQL support (INSERT, SELECT)
-*   Persistent disk storage
+- B-tree based storage engine
+- Basic SQL support (INSERT, SELECT)
+- Persistent disk storage
+- Interactive command-line interfacee
 
 ## Technologies Used
 
-*   C
+- C
 
 ## Installation
 
@@ -37,12 +38,40 @@ A simple SQLite-like database built in C with B-tree storage, supporting basic S
     ./sqlite_clone <database_file>
     ```
 
-2.  Interact with the database using SQL commands.  For example:
+2.  Interact with the database using SQL commands. For example:
 
     ```sql
     INSERT INTO table_name (column1, column2) VALUES ('value1', 'value2');
     SELECT * FROM table_name;
     ```
+
+##Example
+
+```bash
+$ ./main
+db > insert 1 john john@email.com
+Executed.
+db > insert 2 jane jane@email.com
+Executed.
+db > select
+(1, john, john@email.com)
+(2, jane, jane@email.com)
+Executed.
+db > .exit
+```
+
+## Key Functions
+
+**get_page():** Memory management for pages
+
+**cursor_value():** Access data at cursor position
+
+**leaf_node_insert():** Insert into leaf node
+
+**leaf_node_split_and_insert():** Handle node splitting
+
+**internal_node_insert():** Insert into internal node
+
 
 ## License
 
